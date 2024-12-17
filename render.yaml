@@ -12,8 +12,3 @@ services:
         value: mysql://root@localhost:3306/alumni-system # Replace with your actual database connection string
       - key: NODE_ENV
         value: production
-
-databases:
-  - name: alumni-system
-    type: mysql
-    region: singapore # Adjust to match your service region
