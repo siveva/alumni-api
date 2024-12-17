@@ -1,0 +1,19 @@
+services:
+  - name: alumni-api
+    type: web
+    env: node
+    region: singapore # Adjust to your preferred region
+    buildCommand: npm install
+    startCommand: npm start
+    branch: main # Replace with the branch you want to deploy
+    healthCheckPath: / # Define the health check path (e.g., `/health`)
+    envVars:
+      - key: DATABASE_URL
+        value: mysql://root@localhost:3306/alumni-system # Replace with your actual database connection string
+      - key: NODE_ENV
+        value: production
+
+databases:
+  - name: alumni-system
+    type: mysql
+    region: singapore # Adjust to match your service region
