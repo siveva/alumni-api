@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsc",
         "start": "node dist/index.js",
-        "postinstall": "prisma generate && prisma migrate deploy",
+        "postinstall": "prisma generate",
         "dev": "concurrently  \"npx tsc --watch\" \"npx tsc && nodemon -q dist/index.js\""
     },
     "author": "Bryan Rads 2024",
